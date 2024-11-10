@@ -7,6 +7,42 @@
 
 <!-- BEGIN_ANSIBLE_DOCS -->
 
-### The readme content is auto-generated with the `hatch run docs:generate` command.
+# Ansible Role: [jellyseerr](https://docs.jellyseerr.dev/)
+
+A role to deploy Jellyseerr using rootless Podman with systemd
+
+## Role Requirements
+
+- none
+
+*Refer to services collection for general requirements*
+
+## Role Arguments
+
+|Option|Description|Type|Required|Default|
+|---|---|---|---|---|
+|jellyseerr_config_path|The path to the jellyseerr configuration directory|str|False|~/.config/jellyseerr/|
+|jellyseerr_timezone|The timezone for the jellyseerr service|str|False|Etc/UTC|
+|jellyseerr_version|The version of jellyseerr container|str|False|latest|
+|jellyseerr_web_port|The port for the web server|int|False|5055|
+
+
+## Example Playbook
+
+```
+- hosts: all
+  tasks:
+    - name: Importing jellyseerr role
+      ansible.builtin.import_role:
+        name: selfhosted.services.jellyseerr
+      vars:
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE)
+
+
+⊂(▀¯▀⊂)
 
 <!-- END_ANSIBLE_DOCS -->

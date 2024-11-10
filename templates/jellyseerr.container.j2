@@ -1,0 +1,16 @@
+[Unit]
+Description=An application for managing requests for your media library.
+
+[Container]
+AutoUpdate=registry
+ContainerName=jellyseerr
+Environment=TZ={{ jellyseerr_timezone }}
+Image=docker.io/fallenbagel/jellyseerr:{{ jellyseerr_version }}
+PublishPort={{ jellyseerr_web_port }}:5055
+Volume={{ jellyseerr_config_path }}:/app/config
+
+[Service]
+Restart=unless-stopped
+
+[Install]
+WantedBy=multi-user.target
