@@ -1,0 +1,4 @@
+---
+# defaults file for services.jellyseerr
+
+published_port: 8080
