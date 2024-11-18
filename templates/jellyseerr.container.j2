@@ -10,7 +10,7 @@ PublishPort={{ jellyseerr_web_port }}:5055
 Volume={{ jellyseerr_config_path }}:/app/config
 
 [Service]
-Restart=unless-stopped
+Restart=always
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target default.target
