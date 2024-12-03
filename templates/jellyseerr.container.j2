@@ -7,7 +7,7 @@ ContainerName=jellyseerr
 Environment=TZ={{ jellyseerr_timezone }}
 Image=docker.io/fallenbagel/jellyseerr:{{ jellyseerr_version }}
 PublishPort={{ jellyseerr_web_port }}:5055
-Volume={{ jellyseerr_config_path }}:/app/config
+Volume={{ jellyseerr_config_path }}:/app/config:Z
 
 [Service]
 Restart=always
