@@ -21,6 +21,8 @@ A role to deploy Jellyseerr using rootless Podman with systemd
 
 |Option|Description|Type|Required|Default|
 |---|---|---|---|---|
+|jellyseerr_additional_options|List of additional key=value for the quadlet container<br>ex: - "Network=custom.network"<br>Can also be used to leave comments by preceding with a '#'|list|False|[]|
+|jellyseerr_config_label|The labels for to the jellyseerr config directory<br>Comma separated values (ex: rw,Z)|str|False||
 |jellyseerr_config_path|The path to the jellyseerr configuration directory|str|False|~/.config/jellyseerr/|
 |jellyseerr_timezone|The timezone for the jellyseerr service|str|False|Etc/UTC|
 |jellyseerr_version|The version of jellyseerr container|str|False|latest|

@@ -1,4 +1,6 @@
 ---
+jellyseerr_additional_options: []
+jellyseerr_config_label: ''
 jellyseerr_config_path: ~/.config/jellyseerr/
 jellyseerr_timezone: Etc/UTC
 jellyseerr_version: latest
